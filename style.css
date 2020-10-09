@@ -43,11 +43,10 @@ h3 {
 
 #stage .animation {
   height: -webkit-fill-available;
-  position: relative;
   border: 1.5px dashed #c9c8c8;
 }
 
-#stage .animation .square {
+#stage .animation #hero {
   width: 75px;
   height: 75px;
   border: 1.5px dashed #f00;
@@ -56,29 +55,33 @@ h3 {
   position: relative;
 
   /*Step 1: 5 seconds once*/
-  animation-name: move1;
+  /*animation-name: move1;
   animation-duration: 5s;
-  animation-iteration-count: 1;
+  animation-iteration-count: 1;*/
 
   /*Step 2: 5 seconds repeatedly*/
-  animation-iteration-count: infinite;
+  /*animation-iteration-count: infinite;*/
 
   /*Step 3: 2 seconds repeatedly*/
-  animation-duration: 2s;
+  /*animation-duration: 2s;
   animation-direction: alternate;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
 
   /*Step 4: 5 seconds repeatedly*/
-  animation-direction: normal;
+  /*animation-direction: normal;
   animation-duration: 5s;
+  animation-iteration-count: 1;*/
 
   /*Step 5-7: like the picture*/
   /*animation-name: move2;*/
+  
+  animation: move1 5s forwards, move1 5s 5s forwards infinite, move1 2s 20s forwards infinite alternate, 
+             move1 5s 32s forwards infinite, move1 5s 42s forwards, move_down 2s 47s forwards;
 }
 
 @keyframes move1 {
   from {left: 10px;}
-  to {left: 521px;}
+  to {left: 520px;}
 
   /*0% {top:10px;left:10px;}
   25% {top:10px;left:521;}*/
@@ -86,7 +89,12 @@ h3 {
 
 @keyframes move2 {
   from {left: 10px;}
-  to {left: 521px;background: green;}
+  to {left: 520px;background: green;}
+}
+
+@keyframes move_down {
+  from {top: 10px;}
+  to {top: 200px;background: orange;}
 }
 
 #myfooter {

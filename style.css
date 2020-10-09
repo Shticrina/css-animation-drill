@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #808080;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #eee;
+  text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+}
+
+#myheader {
+  padding: 0.5em;
+  text-align: center;
+  color: #fff;
+  background-color: #2cc9c1;
+}
+
+#myheader h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 10px;
+  margin: 10px 0;
+}
+
+#stage {
+  width: 610px;
+  height: 610px;
+  padding: 5px;
+  margin: 30px auto;
+  background-color: #f8f4f4;
+}
+
+#stage .animation {
+  height: -webkit-fill-available;
+  position: relative;
+  border: 1.5px dashed #c9c8c8;
+}
+
+#stage .animation .square {
+  width: 75px;
+  height: 75px;
+  border: 1.5px dashed #f00;
+  left: 10px;
+  top: 10px;
+  position: relative;
+}
+
+#myfooter {
+  padding: 1em;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background-color: #148781;
+}

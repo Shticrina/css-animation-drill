@@ -22,6 +22,10 @@
 <body>
     <header id="myheader">
         <h2 class="">Challenge Animations</h2>
+
+        <audio id="song" style="" src="./img/BruceHornsbyAnTheNoisemakers.mp3"  autoplay="autoplay"></audio>
+
+        <a onclick="document.getElementById('song').play();"><i class='fa fa-volume-up' style="color: #F76b1C;"></i></a>
     </header>
     
     <h3>
@@ -51,5 +55,11 @@
             <a href="https://github.com/Shticrina">Github profile</a>
         </p>
     </footer>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("song").play();
+        }
+    </script>
 </body>
 </html>

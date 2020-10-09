@@ -54,47 +54,42 @@ h3 {
   top: 10px;
   position: relative;
 
-  /*Step 1: 5 seconds once*/
-  /*animation-name: move1;
-  animation-duration: 5s;
-  animation-iteration-count: 1;*/
+  /* == Long way animation == */
+  /*animation: move1 5s forwards, move1 5s 5s forwards infinite, move1 2s 20s forwards infinite alternate, 
+            move1 5s 32s forwards infinite, move1 5s 42s forwards, move_down 2s 47s forwards,
+            rotation_left_middle 0.5s 49s forwards, rotation_left_blue 2s 51.5s forwards,
+            diagonal_orange_ball_transform 5s 53.5s forwards;*/
 
-  /*Step 2: 5 seconds repeatedly*/
-  /*animation-iteration-count: infinite;*/
-
-  /*Step 3: 2 seconds repeatedly*/
-  /*animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;*/
-
-  /*Step 4: 5 seconds repeatedly*/
-  /*animation-direction: normal;
-  animation-duration: 5s;
-  animation-iteration-count: 1;*/
-
-  /*Step 5-7: like the picture*/
-  /*animation-name: move2;*/
-  
-  animation: move1 5s forwards, move1 5s 5s forwards infinite, move1 2s 20s forwards infinite alternate, 
-             move1 5s 32s forwards infinite, move1 5s 42s forwards, move_down 2s 47s forwards;
+  /* == Short way animation == */
+  animation: move1 5s forwards, move_down 2s 5s forwards, rotation_left_middle 0.5s 7s forwards, 
+            rotation_left_blue 2s 9.5s forwards, diagonal_orange_ball_transform 5s 11.5s forwards;
 }
 
 @keyframes move1 {
   from {left: 10px;}
   to {left: 520px;}
-
-  /*0% {top:10px;left:10px;}
-  25% {top:10px;left:521;}*/
-}
-
-@keyframes move2 {
-  from {left: 10px;}
-  to {left: 520px;background: green;}
 }
 
 @keyframes move_down {
   from {top: 10px;}
-  to {top: 200px;background: orange;}
+  to {top: 200px;}
+}
+
+@keyframes rotation_left_middle {
+  from {left: 520px; transform: rotate(0deg);}
+  to {left: 260px; transform: rotate(45deg);}
+}
+
+@keyframes rotation_left_blue {
+  from {left: 260px; transform: rotate(45deg);}
+  to {left: 10px; transform: rotate(90deg); border-color: #0900BD;}
+}
+
+@keyframes diagonal_orange_ball_transform {
+  0% {left: 10px;}
+  30% {background-color: #F76B1C; border: none; border-radius: 50%;}
+  100% {top: 450px; left: 450px; background: radial-gradient(#FBDA61, #F76b1C);
+        border: none; width: 150px; height: 150px; border-radius: 50%;}
 }
 
 #myfooter {
@@ -104,3 +99,9 @@ h3 {
   color: #fff;
   background-color: #148781;
 }
+
+/*Responsive*/
+@media (max-width: 600px) {
+  body {
+    width: fit-content;
+  }

@@ -8,3 +8,7 @@ For each step of the exercise, we will look at the images below:
 [![](./img/animations.png)](./img/animations.png)
 
 ***Github page:***  https://shticrina.github.io/css-animation-drill/
+
+***.tk page:***  http://cristina-animation-challenge.tk/
+
+
